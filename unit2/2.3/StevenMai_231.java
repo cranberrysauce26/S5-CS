@@ -19,10 +19,10 @@ public class StevenMai_231 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int N = scan.nextInt();
+		int N = scan.nextInt(); // The number of rows
 		int[][] a = new int[N][];
 		for (int i = 0; i < N; ++i) {
-			int M = scan.nextInt();
+			int M = scan.nextInt(); // The number of columns in this row
 			a[i] = new int[M];
 			for (int j = 0; j < M; ++j) 
 				a[i][j] = scan.nextInt();
