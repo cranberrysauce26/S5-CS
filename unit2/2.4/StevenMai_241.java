@@ -22,5 +22,5 @@ The first is true because a and b are referencing the same memory location
 because they were constructed with the same string.
 The second is true because they were constructed with the same string as well.
 
-However, d is a new string so it is not equal to both b and c.
+However, d is a new string so it is not equal to either b and c.
 */
