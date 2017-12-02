@@ -1,3 +1,6 @@
+/*input
+antelope
+*/
 import java.util.*;
 public class StevenMai_252 {
     static char mostOften(String s){
