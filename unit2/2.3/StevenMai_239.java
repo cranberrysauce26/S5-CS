@@ -1,13 +1,6 @@
-/*input
-3 2
-2 4 5
-5 1 2 
-3 4 5
-*/
-
 import java.util.Scanner;
 
-public class StevenMai_238 {
+public class StevenMai_239 {
 
 	static void print(char[][] a) {
 		for (char[] b : a) {

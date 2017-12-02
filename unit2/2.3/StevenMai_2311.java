@@ -1,3 +1,9 @@
+/*input
+3
+1 2 3
+8 9 4
+7 6 5
+*/
 import java.util.Scanner;
 public class StevenMai_2311 {
 

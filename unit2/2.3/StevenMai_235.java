@@ -1,5 +1,5 @@
 /*input
-10
+4
 */
 import java.util.Scanner;
 

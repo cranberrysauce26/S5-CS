@@ -1,5 +1,5 @@
 /*input
-2
+4
 */
 import java.util.Scanner;
 
@@ -14,9 +14,9 @@ public class StevenMai_236 {
 	}
 
 	static void chess(int[][] p) {
-		for (int i = 1; i <= p.length; ++i) 
-			for (int j = 1; j <= p[i-1].length; ++j) 
-				p[i-1][j-1] = (i&1)^(j&1);
+		for (int i = 0; i < p.length; ++i) 
+			for (int j = 0; j < p[i].length; ++j) 
+				p[i][j] = (i&1)^(j&1)^1;
 	}
 
 	public static void main(String[] args) {

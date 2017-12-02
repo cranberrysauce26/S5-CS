@@ -1,5 +1,5 @@
 /*input
-19
+7
 */
 import java.util.Scanner;
 public class StevenMai_2310 {
