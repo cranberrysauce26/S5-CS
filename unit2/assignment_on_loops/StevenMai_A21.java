@@ -1,5 +1,5 @@
 /*input
-4 4 6
+4 4 3
 */
 import java.util.*;
 
@@ -33,7 +33,7 @@ public class StevenMai_A21 {
 		These two cases are summarized in the result below	
 
 		Number of solutions = max(0, min(N, S-1)-max(1, S-M)+1)
-		
+
 	*/
 
 	public static void main(String[] args) {
