@@ -5,7 +5,6 @@ import java.util.*;
 
 public class StevenMai_A22 {
 
-
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int D = scan.nextInt(), Z = scan.nextInt();
