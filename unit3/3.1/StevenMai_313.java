@@ -7,7 +7,7 @@ public class StevenMai_313{
 
 	static boolean isPower(int n, int base) {
 		if (n==1) return true;
-		if (n % base != 0) return false;
+		if (n==0 || n % base != 0) return false;
 		return isPower(n/base, base);
 	}
 	public static void main(String[] args) {
