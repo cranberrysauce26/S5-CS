@@ -3,7 +3,8 @@
 */
 import java.util.*;
 
-public class StevenMai_A21 {
+public class StevenMai_A21 
+{
 
 	/*
 		Let's say that the N sided die rolls a.
@@ -36,7 +37,8 @@ public class StevenMai_A21 {
 
 	*/
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner scan = new Scanner(System.in);
 		int N = scan.nextInt();
 		int M = scan.nextInt();

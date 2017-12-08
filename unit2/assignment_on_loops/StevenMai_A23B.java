@@ -1,9 +1,10 @@
 /*input
-53 31
+9 6
 */
 import java.util.*;
 
-public class StevenMai_A23B {
+public class StevenMai_A23B 
+{
 	/*
 		This function takes the previous two terms t1 and t2 respectively
 		as well as the length n of the current array.
@@ -21,10 +22,12 @@ public class StevenMai_A23B {
 
 		Then we return the array.
 	*/
-	static int[] recurse(int t1, int t2, int n) {
+	static int[] recurse(int t1, int t2, int n)  
+	{
 		int[] arr;
 		if (t1-t2 >=0) arr = recurse(t2, t1-t2, n+1);
-		else {
+		else 
+		{
 			System.out.printf("%d\n", n);
 			arr = new int[n];
 		}
@@ -33,7 +36,8 @@ public class StevenMai_A23B {
 		return arr;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner scan = new Scanner(System.in);
 		int t1 = scan.nextInt(), t2 = scan.nextInt();
 		int[] arr = recurse(t1, t2, 2);
