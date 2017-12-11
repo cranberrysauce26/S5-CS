@@ -11,7 +11,7 @@ public class StevenMai_3112 {
 
 		/*
 			This program does a binary search to find
-			the last x such that fact(x) resuls in a stack overflow error.
+			the last x such that fact(x) does not result in a stack overflow error.
 
 			We do this by trying to set the first LOG bits of x.
 			All the other bits are zero because we are assuming that x < 2^LOG.
