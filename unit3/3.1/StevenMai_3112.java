@@ -25,9 +25,9 @@ public class StevenMai_3112 {
 		int x = 0;
 		for (int k = LOG-1; k >= 0; --k) {
 			try {
-				fact(x += (1<<k));
+				fact(x |= 1<<k);
 			} catch(StackOverflowError e) {
-				x -= (1<<k);
+				x ^= 1<<k;
 			}
 		}
 		System.out.println(x);
