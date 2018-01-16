@@ -1,6 +1,6 @@
 import java.util.*;
 public class MergeSort {
-	static void merge(int a[], int b[], int c[]) {
+	static void merge(final int a[], final int b[], int c[]) {
 		int i = 0, ai=0, bi=0;
 		while (ai < a.length && bi < b.length) {
 			if (a[ai] < b[bi]) c[i++] = a[ai++];
