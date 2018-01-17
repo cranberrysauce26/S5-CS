@@ -20,12 +20,41 @@ public class MergeSort {
 		merge(left, right, a);
 	}
 
+	static void merge2(int a[], int l, int r) {
+		int mid = (l+r)/2;
+		int[] buff = new int[r-l+1];
+		int idx = 0, lo = l, hi = mid+1;
+
+		// 0 <= lo <= mid, mid+1 <= hi <= r
+		while (lo <= mid && hi <= r) {
+			if (a[lo] < a[hi]) buff[idx++] = a[lo++];
+			else buff[idx++] = a[hi++];
+		}
+		while (lo <= mid) buff[idx++] = a[lo++];
+		while (hi <= r) buff[idx++] = a[hi++];
+		for (int j = l; j <= r; ++j) a[j] = buff[j-l];
+	}
+
+	static void mergeSort2(int a[], int l, int r) {
+		if (l<r){
+			mergeSort2(a, l, (l+r)/2);
+			mergeSort2(a, (l+r)/2+1, r);
+			merge2(a, l, r);
+		}
+	}
+
 	public static void main(String[] args) {
 		Random rand = new Random();
 		int N = 10;
 		int a[] = new int[N];
 		for (int i = 0; i < N; ++i) a[i] = rand.nextInt(100000+1);
-		mergeSort(a);
-		System.out.println(Arrays.toString(a));
+		mergeSort2(a, 0, a.length-1);
+		for (int i = 0; i+1 < a.length; ++i) {
+			if (a[i] > a[i+1]) {
+				System.out.println("Floled to sort");
+				return;
+			}
+		}
+		System.out.println("Succesfully sorted");
 	}
 }

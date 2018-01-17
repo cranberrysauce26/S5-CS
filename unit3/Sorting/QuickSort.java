@@ -79,6 +79,7 @@ public class QuickSort {
 		Proof of correctness of partition2
 		
 		Invariants:
+		
 		for all x in [oldL, l) A[x] < A[r]
 		for all x in (r, oldR] A[x] >= A[r]
 
@@ -103,7 +104,7 @@ public class QuickSort {
 			r-l decreases by 1 every time and so it must terminate.
 			At termination, l==r. 
 			So all oldL <= x < l have A[x] < A[r] and all l < y <= oldR A[y] >= A[l].
-			
+
 	*/
 
 	static int partition2(int A[], int l, int r) {
