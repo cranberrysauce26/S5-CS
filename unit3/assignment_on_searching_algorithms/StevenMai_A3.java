@@ -25,7 +25,16 @@ public class StevenMai_A3 {
 		else return mid;
 	}
 	public static void main(String[] args) {
+
 		int[] a = new int[]{1, 2, 4, 7, 19, 32};
-		System.out.println(binSearch_r(a, 19, 0, a.length-1));
+
+		System.out.println(binSearch_r(a, 19, 0, a.length-1)); // should return 4
+		System.out.println(binSearch_r(a, 19, 0, 3)); // should return -1
+
+		System.out.println(binSearch_i(a, 19, 0, a.length-1)); // should return 4
+		System.out.println(binSearch_i(a, 19, 0, 3)); // should return -1
+
+		System.out.println(linSearch(a, 19, 0, a.length-1)); // should return 4
+		System.out.println(linSearch(a, 19, 0, 3)); // should return -1
 	}
 }
