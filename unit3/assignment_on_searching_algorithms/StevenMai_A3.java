@@ -1,5 +1,7 @@
 public class StevenMai_A3 {
 
+	static final int END = -1;
+
 	public static int linSearch(int[] a, int val, int l, int r) {
 		for (int i = l; i <= r; ++i) if (a[i] == val) return i;
 		return -1;
@@ -24,9 +26,33 @@ public class StevenMai_A3 {
 		else if (a[mid] > val) return binSearch_r(a, val, l, mid-1);
 		else return mid;
 	}
+
+	public static int upper_bound(int[] a, int val, int l, int r) {
+		if (a[r] <= val) return END;
+		while (l < r) {
+			int mid = (l+r)/2;
+			if (a[mid] <= val) l = mid+1;
+			else r = mid;
+		}
+		return l;
+	}
+
+	public static int lower_bound(int[] a, int val, int l, int r) {
+		if (a[r] < val) return END;
+		while (l < r) {
+			int mid = (l+r)/2;
+			if (a[mid] < val) l = mid+1;
+			else r = mid;
+		}
+		return l;
+	}
+	
 	public static void main(String[] args) {
 
 		int[] a = new int[]{1, 2, 4, 7, 19, 32};
+
+		System.out.println(upper_bound(a, 18, 0, a.length-1));
+		System.out.println(lower_bound(a, 4, 0, a.length-1));
 
 		System.out.println(binSearch_r(a, 19, 0, a.length-1)); // should return 4
 		System.out.println(binSearch_r(a, 19, 0, 3)); // should return -1
