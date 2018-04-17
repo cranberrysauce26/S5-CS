@@ -2,6 +2,9 @@ import java.awt.*;
 
 public class ProgramWindow extends Frame {
 
+	// required to get rid of the warning
+	private static final long serialVersionUID = 42L;
+
 	CircleDisplay panel = new CircleDisplay();
 
 	static final int width = 1000;

@@ -2,6 +2,9 @@ import java.awt.*;
 
 public class CircleDisplay extends Panel {
 
+	// required to get rid of the warning
+	private static final long serialVersionUID = 42L;
+
 	static final Color backgroundColor = Color.BLACK;
 	static final Color circleColor = Color.YELLOW;
 

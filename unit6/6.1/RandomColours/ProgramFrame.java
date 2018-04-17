@@ -1,5 +1,8 @@
 import java.awt.*;
 public class ProgramFrame extends Frame {
+	// required to get rid of the warning
+	private static final long serialVersionUID = 42L;
+	
 	private Panel randomColourPanel = new RandomColourPanel();
 	public ProgramFrame() {
 		setTitle("Random Colours");
