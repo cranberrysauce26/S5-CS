@@ -15,9 +15,8 @@ public class ProgramPanel extends Panel implements MouseListener, KeyListener, M
 
 	Dimension dim = new Dimension() ;	// dimensions of both:
 										// the video memory and the off-screen memory
-
-	BufferedImage   osm  ;	// the address of the off-screen memory that holds the off–screen image
-	Graphics  		osg ;	// the reference to the graphics of the off–screen memory
+	BufferedImage   osm;	// the address of the off-screen memory that holds the off-screen image
+	Graphics  		osg;	// the reference to the graphics of the off-screen memory
 
 	public ProgramPanel()
 	{
@@ -33,7 +32,7 @@ public class ProgramPanel extends Panel implements MouseListener, KeyListener, M
 	{
 		dim = getSize() ;
 
-		// allocate a new memory for the off–screen image
+		// allocate a new memory for the off-screen image
 		osm = new BufferedImage( dim.width, dim.height, BufferedImage.TYPE_INT_RGB ) ;
 
 		osg = osm.getGraphics() ; // obtain the address of the off - screen grapics
