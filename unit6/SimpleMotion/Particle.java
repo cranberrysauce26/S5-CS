@@ -57,7 +57,7 @@ public class Particle
 				py = 2*(top + r) - py ; // otherwise, bounce the particle off the top wall
 		}
 	}
-	public void display( Graphics g )
+	public void display(Graphics g)
 	{
 		Color tmp = g.getColor() ;
 		// store the current color of the Graphics
