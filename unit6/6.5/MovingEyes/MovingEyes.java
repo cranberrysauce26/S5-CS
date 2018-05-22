@@ -5,6 +5,7 @@ import java.awt.image.*;
 import java.util.*;
 import java.awt.event.*;
 
+// I used JPanel instead of Panel because it lets me click the x button to cloes the window
 @SuppressWarnings("serial")
 public class MovingEyes extends JPanel implements MouseMotionListener {
 
@@ -14,10 +15,12 @@ public class MovingEyes extends JPanel implements MouseMotionListener {
     private Dimension dim;
     private Point mousePos = new Point();
 
+    // go forward in time
     private void timeStep() {
         eyes.move(0, 0, dim.width, dim.height);
     }
 
+    // update osg
     private void updateImage() {
         osg.setColor(Color.orange);
         osg.fillRect(0, 0, dim.width, dim.height);
@@ -38,7 +41,9 @@ public class MovingEyes extends JPanel implements MouseMotionListener {
         TimerTask mainLoopTask = new TimerTask() {
             public void run() {
                 if (dim != null) {
+                    // go forward in time
                     timeStep();
+                    // draw the new scene
                     repaint();
                 }
             }
